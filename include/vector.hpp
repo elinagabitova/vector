@@ -63,9 +63,19 @@ public:
     }    
     void push_back(int value) 
     {
-        
+	cout << " enter increasing number";
+        cin >> value;
     }
     int operator[](unsigned int index) const 
     {
+	int z = ptr[index];
+	    return z;
     }
 };
+int main()
+{
+	vector_t first = vector_t (3);
+	
+	
+	
+	
