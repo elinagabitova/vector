@@ -55,7 +55,7 @@ public:
     };
     unsigned int size() const 
     {
-        return size_;
+	return size_ ;
     }
     unsigned int capacity() const
     {
@@ -65,6 +65,8 @@ public:
     {
 	cout << " enter increasing number";
         cin >> value;
+	capacity = capacity + value;
+	size_ = size + 1;
     }
     int operator[](unsigned int index) const 
     {
@@ -75,6 +77,8 @@ public:
 int main()
 {
 	vector_t first = vector_t (3);
+	
+}
 	
 	
 	
