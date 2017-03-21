@@ -1,85 +1,45 @@
 #include <iostream>
 
-class vector_t 
+using namespace std;
+
+сlass complex_t
 {
+
 private:
-    unsigned int size_;
-    unsigned int capacity_;
-    int* ptr_;
-    void swap(vector_t& other)
+
+	double a;
+	double b;
+
 public:
-    vector_t()
-    {
-    };
-    vector_t(unsigned int size)
-        {
-			cout << "enter the size of matrix";
-			cin >> size_;
-		};
-    vector_t(const vector_t& other)
-       {
-			size_ = other.size_;
-			capacity = other.capacity;
-			ptr = new int [capacity];
 
-			for (int i = 0; i < size_; i++)
-			{
-				ptr[i] = new int [other.capacity];
-			}
-		}
- 
-    vector& operator=(const vector_t& other)		
-        if (this != &other)
-			{
+	complex_t();
 
-				for (int i = 0; i < size_; i++)
-				{
-					delete[]ptr;
-					size_ = other.size_;
-					capacity = other.capacity;
+	complex_t(double x, double y);
 
-					ptr = new int*[capacity];
+	complex_t(const complex_t&cop);
 
-					for (int i = 0; i < capacity; i++)
-					{
-						ptr[i] = new int[capacity];
-					}
-				}
-				ptr[capacity] = other.ptr[capacity];
-			}
-			return *this;
-        }
-    ~vector_t() 
-    {
-        
-    };
-    unsigned int size() const 
-    {
-	return size_ ;
-    }
-    unsigned int capacity() const
-    {
-        return capacity_;
-    }    
-    void push_back(int value) 
-    {
-	cout << " enter increasing number";
-        cin >> value;
-	capacity = capacity + value;
-	size_ = size + 1;
-    }
-    int operator[](unsigned int index) const 
-    {
-	int z = ptr[index];
-	    return z;
-    }
+	double a_() const;
+
+	double b_() const;
+
+	complex_t operator * (const complex_t& c2) const;
+
+	complex_t operator / (const complex_t& c2) const;
+
+	complex_t operator += (const complex_t& c2); 
+
+	complex_t operator -= (const complex_t& c2) ;
+
+	complex_t operator *= (const complex_t& c2) ;
+
+	complex_t operator /= (const complex_t& c2) ;
+
+	complex_t operator = (const complex_t& result);
+
+	bool operator == (const complex_t& c2) const;
+
+	friend istream& operator >> (istream&cin,complex_t& result);
+
+	friend ostream& operator << (ostream&cout,const complex_t& result);
+
 };
-int main()
-{
-	vector_t first = vector_t (3);
-	
-}
-	
-	
-	
-	
