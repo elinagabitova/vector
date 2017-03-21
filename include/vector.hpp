@@ -9,7 +9,6 @@ private:
 
 	double a;
 	double b;
-
 public:
 
 	complex_t();
