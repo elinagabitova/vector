@@ -96,7 +96,7 @@ complex_t complex_t::operator * (const complex_t& v) const
 {
 
 	return complex_t(a*v.a - b*v.b, a*v.b + v.a*b);
-м
+
 }
 
 
