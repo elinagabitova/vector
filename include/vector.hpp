@@ -16,30 +16,29 @@ public:
 
 	complex_t(double x, double y);
 
-	complex_t(const complex_t&cop);
-
+	complex_t(const complex_t&copy);
 	double a_() const;
 
 	double b_() const;
 
-	complex_t operator * (const complex_t& c2) const;
+	complex_t operator * (const complex_t& v) const;
 
-	complex_t operator / (const complex_t& c2) const;
+	complex_t operator / (const complex_t& v) const;
 
-	complex_t operator += (const complex_t& c2); 
+	complex_t operator += (const complex_t& v); 
 
-	complex_t operator -= (const complex_t& c2) ;
+	complex_t operator -= (const complex_t& v) ;
 
-	complex_t operator *= (const complex_t& c2) ;
+	complex_t operator *= (const complex_t& v) ;
 
-	complex_t operator /= (const complex_t& c2) ;
+	complex_t operator /= (const complex_t& v) ;
 
-	complex_t operator = (const complex_t& result);
+	complex_t operator = (const complex_t& res);
 
-	bool operator == (const complex_t& c2) const;
+	bool operator == (const complex_t& v) const;
 
-	friend istream& operator >> (istream&cin,complex_t& result);
+	friend istream& operator >> (istream&in,complex_t& res);
 
-	friend ostream& operator << (ostream&cout,const complex_t& result);
+	friend ostream& operator << (ostream&out,const complex_t& res);
 
 };
