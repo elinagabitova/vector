@@ -65,7 +65,6 @@ istream& operator >> (istream&in, complex_t& res)
 	in >> res.a;
 
 	cout << "enter imaginary part:" << endl;
-
 	in >> res.b;
 	cout << endl;
 	return in;
