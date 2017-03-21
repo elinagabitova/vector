@@ -6,7 +6,8 @@ complex_t::complex_t() : a(0.0), b(0.0)
 
 complex_t::complex_t(double x, double y) : a(x), b(y)
 
-{}
+{
+}
 
 complex_t::complex_t(const complex_t&copy)
 
