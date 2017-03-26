@@ -3,7 +3,7 @@
 using namespace std;
 
 
-сlass complex_t
+class complex_t
 {
 
 private:
