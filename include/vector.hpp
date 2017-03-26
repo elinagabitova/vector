@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 сlass complex_t
 {
 
