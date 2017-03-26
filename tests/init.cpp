@@ -71,7 +71,7 @@ SCENARIO("operator /")
 
 	complex_t v3(1, 0);
 
-v	REQUIRE((v1 / v2) == v3);
+	REQUIRE((v1 / v2) == v3);
 
 }
 
