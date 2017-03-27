@@ -19,11 +19,11 @@ SCENARIO("par constructor")
 
 {
 
-	complex_t Complex(1, 2);
+	complex_t Complex(1, 1);
 
 	REQUIRE(Complex.a_() == 1);
 
-	REQUIRE(Complex.b_() == 2);
+	REQUIRE(Complex.b_() == 1);
 
 }
 
@@ -33,13 +33,13 @@ SCENARIO("copy constructor")
 
 {
 
-	complex_t Complex(1, 2);
+	complex_t Complex(1, 1);
 
 	complex_t copy(Complex);
 
 	REQUIRE(copy.a_() == 1);
 
-	REQUIRE(copy.b_() == 2);
+	REQUIRE(copy.b_() == 1);
 
 }
 
