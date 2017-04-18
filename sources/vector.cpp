@@ -1,6 +1,6 @@
 #include "vector.hpp"
 
-vector_t::vector_t() noexpect
+vector_t::vector_t()
 {
 size_ = 0;
 capacity_ = 0;
