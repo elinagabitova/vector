@@ -1,22 +1,27 @@
 #include "vector.hpp"
 
-complex_t::complex_t() : a(0.0), b(0.0)
-
-{}
-
-complex_t::complex_t(double x, double y) : a(x), b(y)
+vector_t::vector_t()
 
 {
+size_ = 0;
+cap_ = 0;
+p_ = new int [cap_];
 }
 
-complex_t::complex_t(const complex_t&copy)
+vector_t::vector_t(unsigned int size)
+{
+	size_ = size;
+	cap_ = size;
+	p_= new int [cap_];
+}
+
+
+vector_t::vector_t() (const vector_t& other)
 
 {
-
 	a = copy.a;
 
 	b = copy.b;
-
 }
 
 double complex_t::a_() const
