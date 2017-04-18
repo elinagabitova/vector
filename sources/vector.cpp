@@ -15,7 +15,7 @@ vector_t::vector_t(unsigned int size)
 }
 
 
-vector_t::vector_t() (const vector_t& other)
+vector_t::vector_t (const vector_t& other)
 
 {
 	size_ = other.size;
