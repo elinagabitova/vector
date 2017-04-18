@@ -29,7 +29,7 @@ SCENARIO("par constructor")
 		REQUIRE (vector[i] ==0); 
 	}
 }
-
+}
 
 
 SCENARIO(" object ")
@@ -54,6 +54,24 @@ SCENARIO(" object ")
 		a[i] == b[i];
 	
 }
+SCENARIO("vector operator =" , "[init]")
+{
+	vector_t b(4), a;
+	REQUIRE(a.size()==0);
+	REQUIRE(a.capacity()==0);
+	a.push_back(1);
+	a.push_back(2);
+	a.push_back(3);
+	REQUIRE(a.size_ == 4);
+	REQUIRE(a.capacity_ == 5);
+	 b = a;
+	REQUIRE(b.size() == 4);
+	REQUIRE(b.capacity() == 5);
+	for(unsigned int i = 0; i < b.size(); i++)
+		b[i] == a[i];
+}
+
+
 
 SCENARIO("push")
 {
