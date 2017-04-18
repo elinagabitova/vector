@@ -4,24 +4,28 @@ vector_t::vector_t()
 
 {
 size_ = 0;
-cap_ = 0;
-p_ = new int [cap_];
+capacity_ = 0;
+ptr_ = new int [capacity_];
 }
 
 vector_t::vector_t(unsigned int size)
 {
 	size_ = size;
-	cap_ = size;
-	p_= new int [cap_];
+	capacity_ = size;
+	ptr_= new int [capacity_];
 }
 
 
 vector_t::vector_t() (const vector_t& other)
 
 {
-	a = copy.a;
-
-	b = copy.b;
+	size_ = other.size;
+	capacity_ = other.capacity;
+	ptr_= new int [capacity_];
+	for (int i = 0; i<size;i++)
+	{
+		ptr_[i] = other.ptr_[i];
+	}
 }
 
 double complex_t::a_() const
