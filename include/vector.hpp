@@ -2,43 +2,21 @@
 
 using namespace std;
 
-
-class complex_t
+class vector_t 
 {
-
 private:
-
-	double a;
-	double b;
+    unsigned int size_;
+    unsigned int capacity_;
+    int* ptr_;
+    auto swap(vector_t& other) -> void;
 public:
-
-	complex_t();
-
-	complex_t(double x, double y);
-
-	complex_t(const complex_t&copy);
-	double a_() const;
-
-	double b_() const;
-
-	complex_t operator * (const complex_t& v) const;
-
-	complex_t operator / (const complex_t& v) const;
-
-	complex_t operator += (const complex_t& v); 
-
-	complex_t operator -= (const complex_t& v) ;
-
-	complex_t operator *= (const complex_t& v) ;
-
-	complex_t operator /= (const complex_t& v) ;
-
-	complex_t operator = (const complex_t& res);
-
-	bool operator == (const complex_t& v) const;
-
-	friend istream& operator >> (istream&in,complex_t& res);
-
-	friend ostream& operator << (ostream&out,const complex_t& res);
-
+    vector_t() noexcept;
+    vector_t(unsigned int size);
+    vector_t(const vector_t& other);
+    auto operator=(const vector_t& other) -> vector_t&;
+    ~vector_t() noexcept;
+    auto size() const noexcept -> unsigned int;
+    auto capacity() const noexcept -> unsigned int;
+    auto push_back(int value) -> void;
+    auto operator[](unsigned int index) const noexcept -> int;
 };
