@@ -5,7 +5,7 @@ SCENARIO("constructor")
 
 {
 
-	cvector_t vector;
+	vector_t vector;
 
 	REQUIRE(vector.size() = 0);
 
