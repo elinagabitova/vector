@@ -63,11 +63,26 @@ if (this!= &other)
 	    {
 		    delete [] ptr_;
 		    capacity = 1; 
+		    ptr = new int [capacity_];
 	    }
-	    else if (size_ = 1 >= capacity_)
+	    else if (capacity_ == size_)
 	    {
+		    capacity_ = capacity_ + 10;
+		    int ptr2_ = new int [capacity];
 		    
+		    for (unsigned int i = 0; i< size; i++)
+			    ptr2_[i] = ptr_[i]; 
+		    delete [] ptr;
+		    ptr = ptr2_;
 	    }
+	    ptr_[size_] = value];
 		
     }
-    auto operator[](unsigned int index) const noexcept -> int;
+    auto operator[](unsigned int index) const noexcept -> int
+    {
+	    if (index >= size_)
+	    {
+		    cout << "index isnt in range";
+	    }
+	    return ptr_[index];
+    }
