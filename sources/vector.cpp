@@ -1,7 +1,6 @@
 #include "vector.hpp"
 
 vector_t::vector_t() noexpect
-
 {
 size_ = 0;
 capacity_ = 0;
