@@ -41,7 +41,7 @@ if (this!= &other)
 	}
 }
 	
-    ~vector_t() noexcept
+    vector_t::~vector_t() noexcept
     {
 	    size_ = 0;
 	    capacity_ = 0;
