@@ -10,7 +10,7 @@ private:
     int* ptr_;
     auto swap(vector_t& other) -> void;
 public:
-    vector_t() noexcept;
+    vector_t();
     vector_t(unsigned int size);
     vector_t(const vector_t& other);
     auto operator=(const vector_t& other) -> vector_t&;
