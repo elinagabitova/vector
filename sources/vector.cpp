@@ -80,9 +80,6 @@ if (this!= &other)
     }
     auto operator[](unsigned int index) const noexcept -> int
     {
-	    if (index >= size_)
-	    {
-		    cout << "index isnt in range";
-	    }
+	    
 	    return ptr_[index];
     }
