@@ -72,8 +72,8 @@ if (this!= &other)
 		    
 		    for (unsigned int i = 0; i< size; i++)
 			    ptr2_[i] = ptr_[i]; 
-		    delete [] ptr;
-		    ptr = ptr2_;
+		    delete [] ptr_;
+		    ptr_ = ptr2_;
 	    }
 	    ptr_[size_] = value];
 		
