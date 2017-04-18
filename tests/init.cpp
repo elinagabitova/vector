@@ -5,11 +5,11 @@ SCENARIO("constructor")
 
 {
 
-	complex_t Complex;
+	cvector_t vector;
 
-	REQUIRE(Complex.a_() == 0);
+	REQUIRE(vector.size() = 0);
 
-	REQUIRE(Complex.b_() == 0);
+	REQUIRE(vector.capacity() = 0);
 
 }
 
@@ -18,150 +18,54 @@ SCENARIO("constructor")
 SCENARIO("par constructor")
 
 {
+	vector_t vector (1);
 
-	complex_t Complex(1, 1);
+	REQUIRE(vector.size() = 1);
 
-	REQUIRE(Complex.a_() == 1);
-
-	REQUIRE(Complex.b_() == 1);
-
+	REQUIRE(vector.capacity() = 1);
+	
+	for (unsinged int i = 0; i < vector.size(); i++)
+	{
+		REQUIRE (vector[i] ==0); 
+	}
 }
 
 
 
-SCENARIO("copy constructor")
-
+SCENARIO(" object ")
 {
-
-	complex_t Complex(1, 1);
-
-	complex_t copy(Complex);
-
-	REQUIRE(copy.a_() == 1);
-
-	REQUIRE(copy.b_() == 1);
-
+	vector_t a;
+	REQUIRE(a.size_() == 0);	
+	REQUIRE (a.capacity_() == 0);
+	
+	a.puch.back(1);
+	a.push_back(2);
+	a.push_back(3);
+	
+	REQUIRE (a.size_() == 3);
+	REQUIRE (a.capacity_() == 4);
+	
+	vector_t a[b];
+	
+	REQUIRE (a.size_() == 3);
+	REQUIRE (a.capacity_() == 4);
+	
+	for (unsinged int i = 0; i < vector.size(); i++)
+		a[i] == b[i];
+	
 }
 
-
-
-SCENARIO("operator *")
-
+SCENARIO("push")
 {
-
-	complex_t v1(7, 6);
-
-	complex_t v2(5, 4);
-
-	complex_t v3(11, 58);
-
-	REQUIRE((v1*v2) == v3);
-
+	vector_t vector(3) ;
+	REQUIRE(vector.size_() == 3);	
+	REQUIRE (vector.capacity_() == 3);
+	
+	vector.push_back(4);
+		
+	REQUIRE (vector.size_() == 3);
+	REQUIRE (vector.capacity_() == 13);
+	
+	
 }
 
-
-
-SCENARIO("operator /")
-
-{
-
-	complex_t v1(4, 5);
-
-	complex_t v2(4, 5);
-
-	complex_t v3(1, 0);
-
-	REQUIRE((v1 / v2) == v3);
-
-}
-
-
-
-SCENARIO("operator +=")
-
-{
-
-	complex_t v1(11, 1);
-
-	complex_t v2(8, 3);
-
-	complex_t v3(19, 4);
-
-	REQUIRE((v1 += v2) == v3);
-
-}
-
-
-
-SCENARIO("operator -=")
-
-{
-
-	complex_t v1(6, 10);
-
-	complex_t v2(3, 6);
-
-	complex_t v3(3, 4);
-
-	REQUIRE((v1 -= v2) == v3);
-
-}
-
-
-
-SCENARIO("operator *=")
-
-{
-
-	complex_t v1(7, 6);
-
-	complex_t v2(5, 4);
-
-	complex_t v3(11, 58);
-
-	REQUIRE((v1 *= v2) == v3);
-
-}
-
-
-
-SCENARIO("operator /=")
-
-{
-
-	complex_t v1(2, 1);
-
-	complex_t v2(2, 1);
-
-	complex_t v3(1, 0);
-
-	REQUIRE((v1 /= v2) == v3);
-
-}
-
-
-
-SCENARIO("operator =")
-
-{
-
-	complex_t v1(5, 7);
-
-	complex_t v2 = v1;
-
-	REQUIRE(v2 == v1);
-
-}
-
-
-
-SCENARIO("operator ==")
-
-{
-
-	complex_t v1(2, 5);
-	complex_t v2(2, 5);
-
-	REQUIRE(v1 == v2);
-
-}
